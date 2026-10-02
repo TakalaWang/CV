@@ -122,30 +122,26 @@
       {GitRoll}{Dec. 2025 -- Present}
       {Full-Stack Engineer / R\&D (part-time)}{}
       \resumeItemListStart
-        \resumeItem{Own AI-collaboration scoring in the AI Skill Engine: turn-by-turn grading plus an independent benchmark (synthetic personas, A/B tests) keeps model--human score gaps within human--human gaps}
-        \resumeItem{Designed the end-to-end Skill Challenge flow, from human-reviewed question authoring and AI-agent trial runs to checkpoints executed as grading contracts and hash-bound evidence}
+        \resumeItem{Brought the AI Skill Engine's AI-collaboration grader to human-level agreement (model--human score gap within the human--human gap) by replacing whole-conversation grading with turn-by-turn scoring}
+        \resumeItem{Built a benchmark (synthetic personas, perturbations, A/B tests) that catches grader regressions before release}
+        \resumeItem{Designed and shipped the end-to-end Skill Challenge pipeline: human-reviewed question authoring with AI-agent trial runs, executable grading contracts, hash-bound evidence, and Google Classroom intake}
       \resumeItemListEnd
 
     \resumeSubheading
       {Cool English (NTNU \& Ministry of Education)}{Jul. 2023 -- Present}
       {Part-Time Full-Stack Developer}{Taipei, Taiwan}
       \resumeItemListStart
-        \resumeItem{Led the Speech Examination Platform from scratch (SvelteKit, Azure Speech/OpenAI, BullMQ, PostgreSQL), used by 1,000+ students; the scoring queue passed a 2,000-session load test with zero failures}
-        \resumeItem{Built Voice Studio's SSML editor and TTS pipeline, cutting manual recording work by about 80\%}
+        \resumeItem{Led the Speech Examination Platform from scratch for 1,000+ students (SvelteKit, Azure Speech/OpenAI)}
+        \resumeItem{Reached zero failures in a 2,000-session load test by adding backoff retries and idempotent job IDs to AI scoring, and fixed 50\% request failures at 100 concurrent exam starts}
+        \resumeItem{Cut manual recording work by about 80\% by building Voice Studio's SSML editor and Azure TTS pipeline}
       \resumeItemListEnd
 
     \resumeSubheading
       {Acer Medical}{Jul. 2025 -- Aug. 2025}
       {R\&D Summer Intern}{Taipei, Taiwan}
       \resumeItemListStart
-        \resumeItem{Moved the aiGait detection-then-pose cascade from PyTorch to ONNX Runtime on mobile/edge with on-device vectorized processing, frame sampling, and multithreading, making inference about 300\% faster}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {EVA Lab}{Dec. 2025 -- Present}
-      {System Administrator}{Hsinchu, Taiwan}
-      \resumeItemListStart
-        \resumeItem{Run Linux GPU hosts with Ansible; built a monitoring and account system (FastAPI, Prometheus)}
+        \resumeItem{Made aiGait inference about 300\% faster on mobile/edge devices by porting its detection-then-pose cascade from PyTorch to ONNX Runtime, vectorizing on-device processing, and pipelining capture and inference}
+        \resumeItem{Kept gait parameters reliable under occlusion by dropping or interpolating blocked frames}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -156,18 +152,19 @@
       \resumeProjectHeading
           {\textbf{NOJV} $|$ \emph{Open-source online judge (founder); SvelteKit, Temporal, gVisor, Kubernetes}}{Mar. 2026 -- Present}
           \resumeItemListStart
-            \resumeItem{Serves 300+ students in live courses with 8 languages, ICPC/IOI scoring, and code-similarity detection}
-            \resumeItem{Replaced a custom coordinator with Temporal priority/fairness keys after a 789-submission rejudge stalled the queue for 16 min; wrote a 170-line C runner that cut empty-program timing noise from 30--60 ms to 0.98 ms}
+            \resumeItem{Founded and lead a 3-person team; the judge serves 300+ students in live courses across 8 languages}
+            \resumeItem{Ended rejudge-induced queue stalls (16 min behind a 789-submission rejudge) by replacing a custom coordinator with Temporal priority and fairness keys; 100 submissions now finish in 243 s}
+            \resumeItem{Cut timing overhead from 30--60 ms to 0.98 ms by writing nojv-exec, a 170-line C runner using rlimit and wait4}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{OnStage TW} $|$ \emph{Taiwan theatre listings aggregator; SvelteKit, PWA}}{2026}
           \resumeItemListStart
-            \resumeItem{Aggregates 6 ticketing sources into 529 productions with youth-ticket, map, calendar, and RSS views}
+            \resumeItem{Aggregated 6 ticketing platforms into one static site (529 productions) with youth-ticket filters}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{TWLinter} $|$ \emph{Taiwan Traditional Chinese wording linter; CLI, Chrome extension, Discord bot}}{2026}
           \resumeItemListStart
-            \resumeItem{Deterministic fixes for mainland terms and punctuation; an LLM may only choose among known candidates}
+            \resumeItem{Kept automatic fixes deterministic by letting the LLM step choose only among rule-generated candidates}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -175,9 +172,9 @@
 \section{Activities \& Achievements}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{NYCU LIFE}{: GitOps Kubernetes operations and campus services; founded a course planner} \\
-     \textbf{Hackathons}{: 1st overall at BUILDMODE Gen-AI 2026 (urtube); top 5 at Sea $\times$ OpenAI Codex Taiwan 2026} \\
-     \textbf{Teaching}{: Programming I \& II TA for four semesters; GDG on Campus NTNU core team and tech speaker}
+     \textbf{Hackathons}{: 1st overall at BUILDMODE Gen-AI 2026 (urtube); top 5 of 30 at Sea $\times$ OpenAI Codex Taiwan 2026} \\
+     \textbf{NYCU LIFE}{: run operations for a GitOps Kubernetes cluster hosting campus services; founded a course planner} \\
+     \textbf{GDG on Campus NTNU}{: core team member and tech speaker; ran talks and study groups for 100+ participants}
     }}
  \end{itemize}
 
