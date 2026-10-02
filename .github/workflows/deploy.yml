@@ -23,7 +23,7 @@ jobs:
         with:
           root_file: cv.tex
       - run: |
-          test "$(pdfinfo cv.pdf | awk '/^Pages:/ {print $2}')" = 1 || { echo "CV must stay on one page"; exit 1; }
+          grep -q "Output written on cv.pdf (1 page" cv.log || { echo "CV must stay on one page"; exit 1; }
           mkdir site
           cp cv.pdf site/Chung-Chun_Wang_CV.pdf
           cp index.html site/
