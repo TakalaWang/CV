@@ -1,0 +1,204 @@
+%-------------------------
+% Resume in Latex
+% Template: "Jake's Resume" by Jake Gutierrez — https://github.com/jakegut/resume
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+% Changes: A4 paper; content for Chung-Chun (Takala) Wang.
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\hypersetup{pdftitle={Chung-Chun Wang - CV}, pdfauthor={Chung-Chun Wang}}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Chung-Chun (Takala) Wang} \\ \vspace{1pt}
+    \small \href{mailto:ccwangtakala@gmail.com}{\underline{ccwangtakala@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/takalawang/}{\underline{linkedin.com/in/takalawang}} $|$
+    \href{https://github.com/TakalaWang}{\underline{github.com/TakalaWang}} $|$
+    \href{https://takalawang.github.io/resume/}{\underline{takalawang.github.io/resume}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Yang Ming Chiao Tung University}{Hsinchu, Taiwan}
+      {M.S., Institute of Computer Science and Engineering}{Sep. 2025 -- Jun. 2027 (expected)}
+    \resumeSubheading
+      {National Taiwan Normal University}{Taipei, Taiwan}
+      {B.S. in Computer Science and Information Engineering; GPA 4.20/4.30, rank 3/50}{Sep. 2021 -- Jun. 2025}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {GitRoll}{Dec. 2025 -- Present}
+      {Full-Stack Engineer / R\&D (part-time)}{}
+      \resumeItemListStart
+        \resumeItem{Own AI-collaboration scoring in the AI Skill Engine: turn-by-turn grading plus an independent benchmark (synthetic personas, A/B tests) keeps model--human score gaps within human--human gaps}
+        \resumeItem{Designed the end-to-end Skill Challenge flow, from human-reviewed question authoring and AI-agent trial runs to checkpoints executed as grading contracts and hash-bound evidence}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cool English (NTNU \& Ministry of Education)}{Jul. 2023 -- Present}
+      {Part-Time Full-Stack Developer}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{Led the Speech Examination Platform from scratch (SvelteKit, Azure Speech/OpenAI, BullMQ, PostgreSQL), used by 1,000+ students; the scoring queue passed a 2,000-session load test with zero failures}
+        \resumeItem{Built Voice Studio's SSML editor and TTS pipeline, cutting manual recording work by about 80\%}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Acer Medical}{Jul. 2025 -- Aug. 2025}
+      {R\&D Summer Intern}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{Moved the aiGait detection-then-pose cascade from PyTorch to ONNX Runtime on mobile/edge with on-device vectorized processing, frame sampling, and multithreading, making inference about 300\% faster}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {EVA Lab}{Dec. 2025 -- Present}
+      {System Administrator}{Hsinchu, Taiwan}
+      \resumeItemListStart
+        \resumeItem{Run Linux GPU hosts with Ansible; built a monitoring and account system (FastAPI, Prometheus)}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{NOJV} $|$ \emph{Open-source online judge (founder); SvelteKit, Temporal, gVisor, Kubernetes}}{Mar. 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Serves 300+ students in live courses with 8 languages, ICPC/IOI scoring, and code-similarity detection}
+            \resumeItem{Replaced a custom coordinator with Temporal priority/fairness keys after a 789-submission rejudge stalled the queue for 16 min; wrote a 170-line C runner that cut empty-program timing noise from 30--60 ms to 0.98 ms}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{OnStage TW} $|$ \emph{Taiwan theatre listings aggregator; SvelteKit, PWA}}{2026}
+          \resumeItemListStart
+            \resumeItem{Aggregates 6 ticketing sources into 529 productions with youth-ticket, map, calendar, and RSS views}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{TWLinter} $|$ \emph{Taiwan Traditional Chinese wording linter; CLI, Chrome extension, Discord bot}}{2026}
+          \resumeItemListStart
+            \resumeItem{Deterministic fixes for mainland terms and punctuation; an LLM may only choose among known candidates}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------ACTIVITIES-----------
+\section{Activities \& Achievements}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{NYCU LIFE}{: GitOps Kubernetes operations and campus services; founded a course planner} \\
+     \textbf{Hackathons}{: 1st overall at BUILDMODE Gen-AI 2026 (urtube); top 5 at Sea $\times$ OpenAI Codex Taiwan 2026} \\
+     \textbf{Teaching}{: Programming I \& II TA for four semesters; GDG on Campus NTNU core team and tech speaker}
+    }}
+ \end{itemize}
+
+%-----------HONORS-----------
+\section{Honors \& Publications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Awards}{: ICPC Bronze (2022, 2023); NCPC 4th (2023); CPE top 0.6\%; Formosa ASR Challenge 2023 2nd \& 3rd} \\
+     \textbf{Papers}{: SLaTE 2025 (first author, speaking-assessment data augmentation); O-COCOSDA 2024; ROCLING 2023}
+    }}
+ \end{itemize}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, Python, Go, Rust, C/C++} \\
+     \textbf{Web}{: SvelteKit, React/Next.js, Astro, Node.js, FastAPI, Prisma, Tailwind CSS, Playwright} \\
+     \textbf{Infrastructure}{: Kubernetes, Docker, Helm, Flux/Argo CD, Temporal, PostgreSQL, Redis, GitHub Actions, Ansible} \\
+     \textbf{AI}{: PyTorch, Hugging Face, ONNX Runtime, LLM evaluation, RAG, Whisper/LoRA, Azure Speech/OpenAI}
+    }}
+ \end{itemize}
+
+\end{document}

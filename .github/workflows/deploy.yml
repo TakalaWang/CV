@@ -1,0 +1,42 @@
+name: Build and deploy CV
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+      - run: |
+          test "$(pdfinfo cv.pdf | awk '/^Pages:/ {print $2}')" = 1 || { echo "CV must stay on one page"; exit 1; }
+          mkdir site
+          cp cv.pdf site/Chung-Chun_Wang_CV.pdf
+          cp index.html site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
