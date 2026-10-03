@@ -132,7 +132,7 @@
       {Part-Time Full-Stack Developer}{Taipei, Taiwan}
       \resumeItemListStart
         \resumeItem{Led the Speech Examination Platform from scratch for 1,000+ students (SvelteKit, Azure Speech/OpenAI)}
-        \resumeItem{Reached zero failures in a 2,000-session load test by adding backoff retries and idempotent job IDs to AI scoring, and fixed 50\% request failures at 100 concurrent exam starts}
+        \resumeItem{Reached zero failures in a 2,000-session load test with backoff retries and idempotent AI-scoring jobs}
         \resumeItem{Cut manual recording work by about 80\% by building Voice Studio's SSML editor and Azure TTS pipeline}
       \resumeItemListEnd
 
@@ -153,7 +153,7 @@
           {\textbf{NOJV} $|$ \emph{Open-source online judge (founder); SvelteKit, Temporal, gVisor, Kubernetes}}{Mar. 2026 -- Present}
           \resumeItemListStart
             \resumeItem{Founded and lead a 3-person team; 300+ students in live courses, 100 online at peak, 2,000+ submissions}
-            \resumeItem{Ended rejudge-induced queue stalls (16 min behind a 789-submission rejudge) by replacing a custom coordinator with Temporal priority and fairness keys; 100 submissions now finish in 243 s}
+            \resumeItem{Ended 16-min queue stalls during a 789-submission rejudge by moving scheduling to Temporal priority keys}
             \resumeItem{Cut timing overhead from 30--60 ms to 0.98 ms by writing nojv-exec, a 170-line C runner using rlimit and wait4}
           \resumeItemListEnd
       \resumeProjectHeading
