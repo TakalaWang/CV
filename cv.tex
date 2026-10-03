@@ -3,7 +3,7 @@
 % Template: "Jake's Resume" by Jake Gutierrez — https://github.com/jakegut/resume
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
-% Changes: A4 paper; content for Chung-Chun (Takala) Wang.
+% Changes: A4 paper (+0.2in text height); content for Chung-Chun (Takala) Wang.
 %------------------------
 
 \documentclass[a4paper,11pt]{article}
@@ -32,7 +32,7 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1.2in} % A4 is taller than Letter; the extra 0.2in keeps one page across TeX versions
 
 \urlstyle{same}
 
@@ -96,23 +96,13 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Chung-Chun (Takala) Wang} \\ \vspace{1pt}
+    \textbf{\Huge \scshape Chung-Chun (Takala) Wang} \\ \vspace{2pt}
+    \large Full-Stack \& Cloud Infrastructure Engineer \\ \vspace{2pt}
     \small \href{mailto:ccwangtakala@gmail.com}{\underline{ccwangtakala@gmail.com}} $|$
     \href{https://www.linkedin.com/in/takalawang/}{\underline{linkedin.com/in/takalawang}} $|$
     \href{https://github.com/TakalaWang}{\underline{github.com/TakalaWang}} $|$
     \href{https://takalawang.github.io/resume/}{\underline{takalawang.github.io/resume}}
 \end{center}
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {National Yang Ming Chiao Tung University}{Hsinchu, Taiwan}
-      {M.S., Institute of Computer Science and Engineering}{Sep. 2025 -- Jun. 2027 (expected)}
-    \resumeSubheading
-      {National Taiwan Normal University}{Taipei, Taiwan}
-      {B.S. in Computer Science and Information Engineering; GPA 4.20/4.30, rank 3/50}{Sep. 2021 -- Jun. 2025}
-  \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Experience}
@@ -140,36 +130,50 @@
       {Acer Medical}{Jul. 2025 -- Aug. 2025}
       {R\&D Summer Intern}{Taipei, Taiwan}
       \resumeItemListStart
-        \resumeItem{Made the aiGait model about 300\% faster on mobile and edge devices by moving inference to ONNX Runtime}
+        \resumeItem{Made the aiGait gait-analysis model about 300\% faster and deployed it on mobile devices for clinics}
         \resumeItem{Kept gait measurements accurate when staff blocked the camera by dropping or filling in those frames}
       \resumeItemListEnd
 
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Yang Ming Chiao Tung University}{Hsinchu, Taiwan}
+      {M.S., Institute of Computer Science and Engineering}{Sep. 2025 -- Jun. 2027 (expected)}
+    \resumeSubheading
+      {National Taiwan Normal University}{Taipei, Taiwan}
+      {B.S. in Computer Science and Information Engineering; GPA 4.20/4.30, rank 3/50}{Sep. 2021 -- Jun. 2025}
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{NOJV} $|$ \emph{Open-source online judge (founder); SvelteKit, Temporal, gVisor, Kubernetes}}{Mar. 2026 -- Present}
+          {\textbf{NOJV} $|$ \emph{SvelteKit, Temporal, gVisor, Kubernetes}}{Mar. 2026 -- Present}
           \resumeItemListStart
-            \resumeItem{Founded and lead a 3-person team; 300+ students in live courses, 100 online at peak, 2,000+ submissions}
-            \resumeItem{Ended 16-min queue stalls during a 789-submission rejudge by moving scheduling to Temporal priority keys}
-            \resumeItem{Cut timing overhead from 30--60 ms to 0.98 ms by writing nojv-exec, a 170-line C runner using rlimit and wait4}
+            \resumeItem{Founded an open-source online judge for university programming courses and lead its 3-person team}
+            \resumeItem{Serves 300+ students in live courses with 2,000+ submissions graded and up to 100 students online at once}
+            \resumeItem{Kept grading on time during mass regrades and made run-time measurement precise to under 1 ms}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Hinagiku} $|$ \emph{Classroom AI platform, Academia Sinica \& NTNU; SvelteKit, Gemini}}{Sep. 2024 -- Jun. 2025}
+          {\textbf{Hinagiku} $|$ \emph{SvelteKit, Firebase, Gemini}}{Sep. 2024 -- Jun. 2025}
           \resumeItemListStart
-            \resumeItem{Built the LLM chat core and summary APIs that turn group discussion into AI guidance; piloted in classrooms}
+            \resumeItem{Built an AI-guided classroom discussion platform with Academia Sinica and NTNU, piloted in real classes}
+            \resumeItem{Developed the AI chat and summary features that turn group discussions into reports teachers can export}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{OnStage TW} $|$ \emph{Taiwan theatre listings aggregator; SvelteKit, PWA}}{2026}
+          {\textbf{OnStage TW} $|$ \emph{SvelteKit, PWA}}{2026}
           \resumeItemListStart
-            \resumeItem{Aggregated 6 ticketing platforms into one static site (529 productions) with youth-ticket filters}
+            \resumeItem{Launched an open-source site that gathers 529 Taiwan theatre productions from 6 ticketing platforms}
+            \resumeItem{Added youth-ticket filtering with map, calendar, and RSS views so students can find affordable shows}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{urtube} $|$ \emph{Interest matching from YouTube history, hackathon winner; TypeScript, embeddings}}{2026}
+          {\textbf{urtube} $|$ \emph{TypeScript, embeddings, Docker}}{2026}
           \resumeItemListStart
-            \resumeItem{Owned AI interest analysis: semantic video tags, cached embeddings, and weighted interest clustering}
+            \resumeItem{Won 1st overall among 600+ developers at BUILDMODE Gen-AI Hackathon 2026 with a 5-person team}
+            \resumeItem{Built the AI that profiles interests from YouTube watch history to match people with shared topics}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -177,9 +181,9 @@
 \section{Activities \& Achievements}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Hackathons}{: BUILDMODE Gen-AI 2026 1st overall (600+ developers); Sea $\times$ OpenAI Codex 2026 top 5 of 30} \\
      \textbf{NYCU LIFE}{: run operations for a GitOps Kubernetes cluster hosting campus services; founded a course planner} \\
-     \textbf{GDG on Campus NTNU}{: core team member and tech speaker; ran talks and study groups for 100+ participants}
+     \textbf{GDG on Campus NTNU}{: core team member and tech speaker; ran talks and study groups for 100+ participants} \\
+     \textbf{Hackathon}{: top 5 of 30 teams at Sea $\times$ OpenAI Codex Hackathon Taiwan 2026 with Weave-In}
     }}
  \end{itemize}
 
