@@ -27,6 +27,9 @@ jobs:
           mkdir site
           cp cv.pdf site/Chung-Chun_Wang_CV.pdf
           cp index.html site/
+          # Share preview: the top of page one, cropped to the 1.91:1 card ratio.
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils >/dev/null
+          pdftoppm -png -r 150 -f 1 -l 1 -singlefile -x 0 -y 0 -W 1240 -H 649 cv.pdf site/preview
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
