@@ -122,9 +122,9 @@
       {GitRoll}{Dec. 2025 -- Present}
       {Full-Stack Engineer / R\&D (part-time)}{}
       \resumeItemListStart
-        \resumeItem{Brought the AI-collaboration grader within human--human agreement by switching to turn-by-turn scoring}
+        \resumeItem{Brought the AI Skill Engine's AI-collaboration grader to human-level agreement (model--human score gap within the human--human gap) by replacing whole-conversation grading with turn-by-turn scoring}
         \resumeItem{Built a benchmark (synthetic personas, perturbations, A/B tests) that catches grader regressions before release}
-        \resumeItem{Designed the end-to-end Skill Challenge pipeline, from question authoring to executable grading contracts}
+        \resumeItem{Designed and shipped the end-to-end Skill Challenge pipeline: human-reviewed question authoring with AI-agent trial runs, executable grading contracts, hash-bound evidence, and Google Classroom intake}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -132,7 +132,7 @@
       {Part-Time Full-Stack Developer}{Taipei, Taiwan}
       \resumeItemListStart
         \resumeItem{Led the Speech Examination Platform from scratch for 1,000+ students (SvelteKit, Azure Speech/OpenAI)}
-        \resumeItem{Reached zero failures in a 2,000-session load test with backoff retries and idempotent AI-scoring jobs}
+        \resumeItem{Reached zero failures in a 2,000-session load test by adding backoff retries and idempotent job IDs to AI scoring, and fixed 50\% request failures at 100 concurrent exam starts}
         \resumeItem{Cut manual recording work by about 80\% by building Voice Studio's SSML editor and Azure TTS pipeline}
       \resumeItemListEnd
 
@@ -140,7 +140,8 @@
       {Acer Medical}{Jul. 2025 -- Aug. 2025}
       {R\&D Summer Intern}{Taipei, Taiwan}
       \resumeItemListStart
-        \resumeItem{Made aiGait inference about 300\% faster on mobile/edge by porting it to ONNX Runtime and pipelining I/O}
+        \resumeItem{Made aiGait inference about 300\% faster on mobile/edge devices by porting its detection-then-pose cascade from PyTorch to ONNX Runtime, vectorizing on-device processing, and pipelining capture and inference}
+        \resumeItem{Kept gait parameters reliable under occlusion by dropping or interpolating blocked frames}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -152,7 +153,7 @@
           {\textbf{NOJV} $|$ \emph{Open-source online judge (founder); SvelteKit, Temporal, gVisor, Kubernetes}}{Mar. 2026 -- Present}
           \resumeItemListStart
             \resumeItem{Founded and lead a 3-person team; 300+ students in live courses, 100 online at peak, 2,000+ submissions}
-            \resumeItem{Ended 16-min queue stalls during a 789-submission rejudge by moving scheduling to Temporal priority keys}
+            \resumeItem{Ended rejudge-induced queue stalls (16 min behind a 789-submission rejudge) by replacing a custom coordinator with Temporal priority and fairness keys; 100 submissions now finish in 243 s}
             \resumeItem{Cut timing overhead from 30--60 ms to 0.98 ms by writing nojv-exec, a 170-line C runner using rlimit and wait4}
           \resumeItemListEnd
       \resumeProjectHeading
@@ -161,19 +162,14 @@
             \resumeItem{Built the LLM chat core and summary APIs that turn group discussion into AI guidance; piloted in classrooms}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{GEPT Speaking Assessment} $|$ \emph{Research with LTTC \& NTNU Speech Lab; PyTorch, BLIP-2, T5}}{2024}
+          {\textbf{OnStage TW} $|$ \emph{Taiwan theatre listings aggregator; SvelteKit, PWA}}{2026}
           \resumeItemListStart
-            \resumeItem{Built a picture, question, and speech scorer (BLIP-2, T5) with 71\%/68\% accuracy on seen/unseen content}
+            \resumeItem{Aggregated 6 ticketing platforms into one static site (529 productions) with youth-ticket filters}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Delta-NTNU ChatBot} $|$ \emph{Enterprise knowledge retrieval with Delta Electronics; GraphRAG, LightRAG}}{}
+          {\textbf{urtube} $|$ \emph{Interest matching from YouTube history, hackathon winner; TypeScript, embeddings}}{2026}
           \resumeItemListStart
-            \resumeItem{Compared GraphRAG, LightRAG, and semantic indexing and built the retrieval evaluation for internal QA}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{NYCU LIFE} $|$ \emph{Student open-source community; Kubernetes, Argo CD, Cilium}}{Apr. 2026 -- Present}
-          \resumeItemListStart
-            \resumeItem{Run operations for a GitOps Kubernetes cluster hosting campus services; founded a course planner}
+            \resumeItem{Owned AI interest analysis: semantic video tags, cached embeddings, and weighted interest clustering}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -182,6 +178,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Hackathons}{: BUILDMODE Gen-AI 2026 1st overall (600+ developers); Sea $\times$ OpenAI Codex 2026 top 5 of 30} \\
+     \textbf{NYCU LIFE}{: run operations for a GitOps Kubernetes cluster hosting campus services; founded a course planner} \\
      \textbf{GDG on Campus NTNU}{: core team member and tech speaker; ran talks and study groups for 100+ participants}
     }}
  \end{itemize}
